@@ -28,6 +28,7 @@ set backspace=indent,eol,start whichwrap+=<,>,[,]
 set clipboard+=unnamed
 " 设置 alt 键不映射到菜单栏
 set winaltkeys=no
+:set fileformats=unix,dos
 " }}}
 
 
@@ -38,6 +39,12 @@ set langmenu=zh_CN
 let $LANG = 'en_US.UTF-8'
 "language messages zh_CN.UTF-8
 " }}}
+
+" syntax
+set nu!
+colorscheme desert
+syntax enable
+syntax on
 
 
 " GUI {{{
@@ -63,7 +70,8 @@ set guioptions-=b
 set guioptions-=e
 set nolist
 " set listchars=tab:▶\ ,eol:¬,trail:·,extends:>,precedes:<
-set guifont=Inconsolata:h12:cANSI
+"set guifont=Inconsolata:h12:cANSI
+set guifont=Consolas:h11:cANSI
 " }}}
 
 
@@ -77,3 +85,9 @@ set foldmethod=indent
 syntax on
 " }}}
 
+
+" Plugin {{{
+"call plug#begin()
+"Plug 'lightline.vim'
+"call plug#end()
+"}}}
